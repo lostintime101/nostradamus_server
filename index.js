@@ -2,7 +2,14 @@
 const express = require('express')
 const app = express()
 const PORT = 4000
+const cors = require("cors")
 
+app.use(
+  cors({
+  origin: "*",
+  methods: ["GET", "POST"],
+  })
+)
 
 app.get('/', (req, res) => {
   res.status(200).json({message: "This is a JSON message"});
