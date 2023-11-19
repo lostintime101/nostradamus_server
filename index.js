@@ -12,7 +12,7 @@ app.use(
 )
 
 app.get('/', (req, res) => {
-  res.status(200).json({message: "This is a JSON message"});
+  res.status(200).json({message: `This is a .env ${process.env.SOLANA_RPC}`});
 })
 
 
