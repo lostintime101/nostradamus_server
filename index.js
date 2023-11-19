@@ -55,8 +55,9 @@ app.post('/', async (req, res) => {
     console.log("complete: ", `https://explorer.solana.com/tx/${result}?cluster=devnet`);
 
   res.status(200).json({
-    message: `This is a .env ${solanaRPC}`,
-    tx: `https://explorer.solana.com/tx/${result}?cluster=devnet`,
+    message: memo,
+    transactionHash: `${result}`,
+    trxLink: `https://explorer.solana.com/tx/${result}?cluster=devnet`,
   });
 
 })
